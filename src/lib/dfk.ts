@@ -19,7 +19,6 @@ export const getCurrentKings = async (realm: Realm): Promise<King[]> => {
     multicallAddress,
     allowFailure: false
   })
-  console.log("Current King Info:", kingInfo);
   const [
     { player: king1, heroes: king1Heroes },
     { player: king3, heroes: king3Heroes },

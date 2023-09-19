@@ -16,3 +16,5 @@ export type NewKingData = { lobby: Lobby, newKing: King, oldKing: King };
 export type Kings = Record<Realm, King[]>;
 
 export type ArrayItem<T> = T extends (infer I)[] ? I : T;
+
+export type HeroInteractionButtonIdType = "basics" | "stats" | "recessives";
