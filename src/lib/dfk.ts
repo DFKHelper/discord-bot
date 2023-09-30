@@ -3,7 +3,7 @@ import { fetchProfileNames } from "./fetch";
 import { unique } from "./helpers";
 import { King, Realm } from "./types";
 import { dfkPublicClient, klaytnPublicClient } from "./viem";
-import { sendEmbed } from "../bot/embeds";
+import { sendEmbed } from "../bot/embeds/heroes";
 
 const getDuel = (realm: Realm) => realm === "dfk" ? dfkDuel : klaytnDuel;
 const getClient = (realm: Realm) => realm === "dfk" ? dfkPublicClient : klaytnPublicClient;
@@ -50,7 +50,7 @@ const onNewDuelKing = async (realm: Realm) => {
     return Promise.resolve();
   }))
   global.kings[realm] = newKings;
-  await sendEmbed(["dfk"], { ...global.kings });
+  await sendEmbed([realm], { ...global.kings });
 }
 
 export const getInitialKingData = async () => {

@@ -8,7 +8,7 @@ import {
 } from "discord.js";
 import { fetchHero } from "../../lib/fetch";
 import { HeroInteractionButtonIdType } from "../../lib/types";
-import { heroEmbedBuilder } from "../embeds";
+import { heroEmbedBuilder } from "../embeds/heroes";
 
 const data = new SlashCommandBuilder()
   .setName("hero")
