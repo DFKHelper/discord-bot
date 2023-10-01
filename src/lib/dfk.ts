@@ -3,7 +3,7 @@ import { fetchProfileNames } from "./fetch";
 import { unique } from "./helpers";
 import { King, Realm } from "./types";
 import { dfkPublicClient, klaytnPublicClient } from "./viem";
-import { sendEmbed } from "../bot/embeds/heroes";
+import { sendEmbed } from "../bot/embeds";
 
 const getDuel = (realm: Realm) => realm === "dfk" ? dfkDuel : klaytnDuel;
 const getClient = (realm: Realm) => realm === "dfk" ? dfkPublicClient : klaytnPublicClient;

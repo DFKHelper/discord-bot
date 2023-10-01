@@ -1,0 +1,12 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Run Bot" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+    <deployment type="docker-image">
+      <settings>
+        <option name="imageTag" value="ghcr.io/dfkhelper/discord-bot:latest" />
+        <option name="containerName" value="discord-bot" />
+        <option name="commandLineOptions" value="--env-file E:\dfkhelper\crier-bot\.env" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
