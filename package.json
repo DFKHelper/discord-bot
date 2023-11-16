@@ -3,22 +3,27 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "dev": "ts-node src/main.ts",
+    "dev": "tsx src/main.ts",
     "build": "tsc",
     "start": "node dist/main.js"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Nicholas St. Germain",
+    "email": "nick@cajun.pro",
+    "url": "https://cajun.pro/"
+  },
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^14.13.0",
-    "viem": "^1.10.14",
+    "discord.js": "^14.14.1",
+    "viem": "^1.19.3",
     "dotenv": "^16.3.1",
-    "@dfkhelper/core": "^0.10.3"
+    "@dfkhelper/core": "^1.2.6"
   },
   "devDependencies": {
     "typescript": "^5.2.2",
-    "ts-node": "10.9.1"
+    "tsx": "4.1.2"
   }
 }
