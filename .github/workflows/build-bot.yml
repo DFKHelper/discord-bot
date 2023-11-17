@@ -62,9 +62,9 @@ jobs:
       - name: Release
         if: ${{ inputs.latest }}
         run: |
-          docker pull ghcr.io/dfkhelper/bot:${{ inputs.latestTag }}
-          docker tag ghcr.io/dfkhelper/bot:${{ inputs.latestTag }} ghcr.io/dfkhelper/bot:latest
+          docker pull ghcr.io/dfkhelper/discord-bot:${{ inputs.latestTag }}
+          docker tag ghcr.io/dfkhelper/discord-bot:${{ inputs.latestTag }} ghcr.io/dfkhelper/discord-bot:latest
           docker buildx imagetools create \
             --append \
-            -t ghcr.io/dfkhelper/bot:latest \
-            ghcr.io/dfkhelper/bot:${{ inputs.latestTag }}
+            -t ghcr.io/dfkhelper/discord-bot:latest \
+            ghcr.io/dfkhelper/discord-bot:${{ inputs.latestTag }}
